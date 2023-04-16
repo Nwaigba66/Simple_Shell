@@ -9,18 +9,19 @@
   as well as basic programming constructs such as if/else statements and loops.
   
 # Features
-. Built-in commands
-. Basic shell functionality
-. Command-line execution
+- Built-in commands
+- Basic shell functionality
+- Command-line execution
 
 # Compilation
 Your shell will be compiled this way:
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
-# Then, to start the shell, run:
-
+Then, to start the shell, run:
+```
 ./hsh
+```
 
 # Testing
 Your shell should work like this in interactive mode:
@@ -34,6 +35,6 @@ $
 
 # Authors
 
-Gloria Nwaigba glorianwaigba@gmail.com
-Kate Onyebuchi iamkatty3@gmail.com
+- Gloria Nwaigba <glorianwaigba@gmail.com>
+- Kate Onyebuchi <iamkatty3@gmail.com>
 
