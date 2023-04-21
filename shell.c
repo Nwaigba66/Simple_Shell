@@ -64,27 +64,42 @@ char **split_line(char *line)
 * Return: 0 (success)
 */
 int main(void)
-{
-	char *MAX_COMMAND_LENGTH;
-	char **argv;
+{ 
+	printf("Enter a line of text: ");
+
+	printf("You entered: %s", input);
+	free(input);
+	return (0);
+
+	printf("Enter a line of text: ");
+	getline(line, sizeof(line), stdin);
+	tokens = split_line(line);
+	for (i = 0; tokens[i] != NULL; i++)
+	{
+		printf("%s\n", tokens[i]);
+	}
+	free(tokens);
+	return (0);
+
+	
+	
 	int status;
-	char *line;
-	char *MAX_COMMAND_LENGTH;
 	pid_t pid;
+	
 /*Handle command lines with arguments**/
 	while (1)
 	{
 		printf("simple_shell$ ");
-		getline(command, MAX_COMMAND_LENGTH, stdin);
+		getline(command, Max_length, stdin);
 /*If user presses Ctrl+D, exit the shell*/
 	command[strcspn(command, "\n")] = '\0';
 	if (strcmp(command, "exit") == 0)
 	{
 	exit(0);
 	}
-if (strcmp(command, "env") == 0)
+	if (strcmp(command, "env") == 0)
 	{
-for (char **env = environ; *env != NULL; env++)
+	for (char **env = environ; *env != NULL; env++)
 /*Handle end of file condition*/
 	{
 	printf("%s\n", *env);
@@ -106,7 +121,6 @@ for (char **env = environ; *env != NULL; env++)
 /*Set last argument to NULL for use in exec*/
 
 /*Search for command in PATH*/
-	found = 0;
 	path = get_path(arguments[0]);
 	if (path == NULL)
 	{
