@@ -1,11 +1,17 @@
-#include "shell.h"
-
+#include "simple_shell.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <errno.h>
 /**
- * _getline - Return command line type by user
+ * getline - Return command line type by user
  *
  * Return: buffer
  */
-char *_getline()
+char *getline(void)
 { static char buffer[BUFFER_SIZE];
 	static int pos = 0;
 
