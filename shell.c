@@ -64,9 +64,8 @@ char **split_line(char *line)
 * Return: 0 (success)
 */
 int main(void)
-{ 
+{
 	printf("Enter a line of text: ");
-
 	printf("You entered: %s", input);
 	free(input);
 	return (0);
@@ -80,12 +79,6 @@ int main(void)
 	}
 	free(tokens);
 	return (0);
-
-	
-	
-	int status;
-	pid_t pid;
-	
 /*Handle command lines with arguments**/
 	while (1)
 	{
