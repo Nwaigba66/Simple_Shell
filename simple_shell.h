@@ -9,6 +9,7 @@
 #include <sys/wait.h>
 
 int main(int argc, char **argv);
+
 int built_exit(void);
 char *_strdup(char *str);
 int _strlen(char *s);
