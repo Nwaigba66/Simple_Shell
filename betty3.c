@@ -52,17 +52,3 @@ int write_output(char **str)
 	return (0);
 }
 
-/**
-* main - main is the entry point of the program
-* @argc: number of arguments passed
-* @argv: array of pointers to char **
-*
-* Return: 0 (success)
-*/
-int main(int argc, char **argv)
-{
-	printf("args num: %d\n", argc);
-	write_output(argv);
-	return (0);
-}
-
