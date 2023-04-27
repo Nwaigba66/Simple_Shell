@@ -49,7 +49,6 @@ int write_output(char **str)
 	fprintf(file, "%s\n", buffer);
 	fclose(file);
 	free(buffer);
-	
 	return (0);
 }
 

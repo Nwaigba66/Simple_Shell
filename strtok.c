@@ -17,7 +17,7 @@ char *_strtok(char *numString, const char *Sep, char **myPtr)
 	{
 	numString = *myPtr;
 	}
-	myString += strspn(myString, Sep);
+	numString += strspn(numString, Sep);
 	if (*numString == '\0')
 	{
 	return (NULL);
@@ -29,8 +29,7 @@ char *_strtok(char *numString, const char *Sep, char **myPtr)
 	*numString = '\0';
 	numString++;
 	}
-	*myPtr = myString;
-	}
+	*myPtr = numString;
 	return (token);
 }
 
