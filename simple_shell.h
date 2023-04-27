@@ -9,7 +9,8 @@
 #include <sys/wait.h>
 
 int main(int argc, char **argv);
-
+char *path = "/bin/ls";
+char *args[] = { path, "/var", NULL };
 int built_exit(void);
 char *_strdup(char *str);
 int _strlen(char *s);
