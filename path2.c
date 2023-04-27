@@ -2,6 +2,40 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
+/**
+* main - main is the entry point of the program
+*
+* Return: 0 on success
+*
+* @command: parameter of type file *
+*
+* path:  pointer to a character array or a string *
+*/
+char *get_path(char *command);
+
+int main(void)
+{
+	char *command = "ls";
+	char *path = get_path(command);
+	int i;
+
+	i = 0;
+
+	if (path == NULL)
+	{
+		fprintf(stderr, "Command not found: %s\n", command);
+		return (1);
+	}
+	for (i = 0; i < 4; i++)
+	{
+		system(path);
+		printf(" ");
+	}
+	printf("\n");
+	free(path);
+	return (0);
+}
 /**
  * get_path - create a path to a file
  *
@@ -31,24 +65,4 @@ char *get_path(char *command)
 	free(path_copy);
 	return (NULL);
 }
-/**
-* main - main is the entry point of the program
-*
-* Return: 0 on success
-*
-*/
-int main(void)
-{
-	char *command = "/bin/ls";
-	char *path = get_path(command);
 
-	if (path == NULL)
-	{
-		printf("Error: %s command not found\n", command);
-		exit(EXIT_FAILURE);
-	}
-	printf("Executing %s\n", path);
-	system(path);
-	free(path);
-	return (0);
-}
