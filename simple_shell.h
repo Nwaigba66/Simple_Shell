@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+int built_exit(void);
 char *_strdup(char *str);
 int _strlen(char *s);
 char **tokenize(char *str, char *delimiter);
@@ -16,5 +17,7 @@ char **get_all_paths(void);
 int execute(char **arguments);
 int shell_loop(void);
 int main(void);
+char *_strtok(char *numString, const char *Sep, char **myPtr);
+
 #endif
 
