@@ -31,4 +31,24 @@ char *get_path(char *command)
 	free(path_copy);
 	return (NULL);
 }
+/**
+* main - main is the entry point of the program
+*
+* Return: 0 on success
+*
+*/
+int main(void)
+{
+	char *command = "/bin/ls";
+	char *path = get_path(command);
 
+	if (path == NULL)
+	{
+		printf("Error: %s command not found\n", command);
+		exit(EXIT_FAILURE);
+	}
+	printf("Executing %s\n", path);
+	system(path);
+	free(path);
+	return (0);
+}
