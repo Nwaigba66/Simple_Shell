@@ -10,20 +10,19 @@
 */
 int main(void)
 {
-	char *path = NULL;
+	char *path = "/bin/ls";
 	char *args[] = { path, "/var", NULL };
 	int i;
 
 	i = 0;
 
 /**Execute /bin/ls*/
-	path = "/bin/ls";
+	
 	system(path);
 	printf("\n");
 /**Execute /bin/ls 3 times*/
 	for (i = 0; i < 3; i++)
 	{
-		path = "/bin/ls";
 		system(path);
 		printf("\n");
 	}
@@ -31,7 +30,6 @@ int main(void)
 	for (i = 0; i < 4; i++)
 	{
 		printf(" ");
-		path = "/bin/ls";
 		system(path);
 	}
 	printf("\n");
