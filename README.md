@@ -33,7 +33,7 @@ hsh main.c shell.c
 ($) exit
 $
 
-# Authors
+# Authors are
 
 - Gloria Nwaigba <glorianwaigba@gmail.com>
 - Kate Onyebuchi <iamkatty3@gmail.com>
